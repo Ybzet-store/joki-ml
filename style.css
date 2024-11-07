@@ -1,17 +1,17 @@
+/* Gaya Umum */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
+    padding: 20px 0;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Mengubah menjadi flex-start untuk menyesuaikan dengan konten */
-    height: 100vh; /* Masih menjaga tinggi viewport */
-    overflow-y: auto; /* Menambahkan kemampuan scroll vertical */
+    align-items: flex-start; /* Mulai dari atas */
+    height: 100vh;
+    overflow-y: hidden;
     background: url("bg.jpg");
     background-position: center;
     background-size: cover;
-    z-index: -1;
 }
 
 .container {
@@ -20,10 +20,10 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px; /* Mempertahankan lebar yang lebih baik */
+    width: 400px;
     text-align: center;
-    max-height: 90vh; /* Menambahkan batas tinggi untuk kontainer */
-    overflow-y: auto; /* Menambahkan kemampuan scroll jika konten terlalu panjang */
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 h1 {
@@ -85,30 +85,60 @@ a {
 /* Gaya untuk tabel */
 table {
     width: 100%;
-    border-collapse: collapse; /* Menghapus jarak antar sel */
+    border-collapse: collapse;
     margin-top: 20px;
 }
 
 th, td {
-    border: 1px solid #ddd; /* Garis untuk tabel */
+    border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
 
 th {
-    background-color: #f2f2f2; /* Warna latar belakang untuk header tabel */
+    background-color: #f2f2f2;
     font-weight: bold;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f9f9f9; /* Warna latar belakang untuk baris genap */
+    background-color: #f9f9f9;
 }
 
 tbody tr:nth-child(odd) {
-    background-color: #ffffff80; /* Warna latar belakang untuk baris ganjil */
+    background-color: #ffffff80;
 }
 
-.logo
-{
+.logo {
     width: 10rem;
+}
+
+/* Gaya Responsif untuk Mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        align-items: center; /* Mengatur kontainer agar tetap di tengah secara vertikal */
+    }
+
+    .container {
+        width: 100%;            /* Menyesuaikan lebar agar sesuai dengan layar mobile */
+        max-width: 100%;         /* Mengatur lebar maksimum agar tidak terlalu besar */
+        margin: 0 10px;          /* Memberikan sedikit margin di sisi kiri dan kanan */
+        max-height: 85vh;        /* Menjaga tinggi maksimum agar container tidak terlalu panjang */
+    }
+
+    h1 {
+        font-size: 24px;         /* Mengurangi ukuran font pada heading */
+    }
+
+    button, input, select, a {
+        font-size: 16px;         /* Menyesuaikan ukuran font */
+    }
+
+    .logo {
+        width: 8rem;             /* Mengurangi ukuran logo */
+    }
+
+    table, th, td {
+        font-size: 14px;         /* Menyesuaikan ukuran teks di dalam tabel */
+    }
 }
