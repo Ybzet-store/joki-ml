@@ -37,9 +37,9 @@
 
         <h3 id="totalHarga">Total Harga: </h3>
 
-        <a id="waLink" href="#" target="_blank">Pesan via WhatsApp</a>
+        <!-- Tombol "Pesan Sekarang" untuk menampilkan popup formulir -->
+        <button id="pesanSekarang">Pesan Sekarang</button>
 
-        <!-- Tabel daftar harga yang disederhanakan -->
         <h2>Daftar Harga Joki</h2>
         <table>
             <thead>
@@ -143,6 +143,35 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+
+    <!-- Popup Formulir -->
+    <div id="popupForm" class="popup">
+        <div class="popup-content">
+            <h3>Untuk melanjutkan proses transaksi harap isi dulu formulir berikut</h3>
+            <label>Opsi Login:</label>
+            <input type="text" id="loginOption" required>
+            
+            <label>User ID:</label>
+            <input type="text" id="userId" required>
+            
+            <label>NickName:</label>
+            <input type="text" id="nickName" required>
+            
+            <label>Email/No HP/Moonton ID:</label>
+            <input type="text" id="contactInfo" required>
+            
+            <label>Password:</label>
+            <input type="password" id="password" required>
+            
+            <label>Catatan:</label>
+            <textarea id="note"></textarea>
+
+            <p>Note: Harap menonaktifkan verifikasi kedua untuk perangkat baru.</p>
+
+            <button id="sendWa">Pesan melalui WhatsApp</button>
+            <button id="closePopup">Tutup</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
