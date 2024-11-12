@@ -22,7 +22,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 400px;
     text-align: center;
-    max-height: 90vh;
+    max-height: 95vh;
     overflow-y: auto; /* Menambahkan overflow di container */
     position: relative; /* Menjaga pop-up terpisah */
 }
@@ -91,8 +91,8 @@ table {
 }
 
 th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    border: 1px solid #040404;
+    padding: 10px;
     text-align: left;
 }
 
@@ -128,6 +128,15 @@ tbody tr:nth-child(odd) {
     overflow-x: auto;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #218838;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 .popup-content {
     background-color: white;
     padding: 20px;
@@ -135,6 +144,10 @@ tbody tr:nth-child(odd) {
     width: 80%;
     max-width: 400px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .popup-content h3, .popup-content label, .popup-content p {
@@ -166,4 +179,38 @@ tbody tr:nth-child(odd) {
 
 #closePopup {
     background-color: #ff4d4d;
+}
+
+/* Media Query untuk Tampilan Mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 10px 0;
+    }
+
+    .container {
+        width: 90%; /* Mengurangi lebar untuk layar kecil */
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px; /* Mengurangi ukuran font untuk judul */
+    }
+
+    button, #sendWa, #closePopup {
+        padding: 8px 10px;
+    }
+
+    .popup-content {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    table, th, td {
+        font-size: 14px; /* Ukuran font tabel lebih kecil */
+    }
+
+    a {
+        padding: 8px;
+        font-size: 14px; /* Mengurangi ukuran font pada link */
+    }
 }
