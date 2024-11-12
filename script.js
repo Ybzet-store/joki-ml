@@ -168,7 +168,7 @@ document.getElementById("sendWa").addEventListener("click", () => {
     const bintangTujuanValue = parseInt(document.getElementById("bintangTujuan").value);
     const totalHarga = document.getElementById("totalHarga").innerText.split(": ")[1];
 
-    const waMessage = `Hallo Min!\nSaya mau joki dari ${rankAwalValue} bintang (${bintangAwalValue}) ke ${rankTujuanValue} bintang (${bintangTujuanValue}) dengan total harga: ${totalHarga}.\n\nData Formulir:\nOpsi Login: ${loginOption}\nUser ID: ${userId}\nNickName: ${nickName}\nKontak: ${contactInfo}\nPassword: ${password}\nCatatan: ${note}\n\nMohon diproses untuk kelanjutan transaksinya, Min.`;
+    const waMessage = `Hallo Min!\nSaya mau joki dari ${rankAwalValue} bintang (${bintangAwalValue}) ke ${rankTujuanValue} bintang (${bintangTujuanValue}) dengan total harga: ${totalHarga}.\n\nData Informasi Akun :\nOpsi Login: ${loginOption}\nUser ID: ${userId}\nNickName: ${nickName}\nKontak: ${contactInfo}\nPassword: ${password}\nCatatan: ${note}\n\nMohon diproses untuk kelanjutan transaksinya, Min.`;
 
     const waLink = `https://wa.me/6281228848754?text=${encodeURIComponent(waMessage)}`;
     window.open(waLink, "_blank");
